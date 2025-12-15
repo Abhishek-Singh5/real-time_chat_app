@@ -4,6 +4,7 @@ import messageRoutes from "./routes/message.route.js"
 import path from "path";
 import { connectDB } from "./lib/db.js";
 import { ENV } from "./lib/env.js";
+import cookieParse from "cookie-parser";
 
 
 const app = express();
@@ -11,7 +12,9 @@ const __dirname = path.resolve();
 
 const PORT = ENV.PORT || 3000;
 
+// payload too large error
 app.use(express.json())  // req.body
+app.use(cookieParse());
 
 
 app.use("/api/auth", authRoutes);
