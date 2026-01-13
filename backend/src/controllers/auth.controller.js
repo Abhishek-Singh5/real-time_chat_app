@@ -126,7 +126,7 @@ export const logout =  (_, res) => {
 
 }
 
-export const updateProfile =  async (_, res) => {
+export const updateProfile =  async (req, res) => {
 
     try {
 
