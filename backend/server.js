@@ -1,12 +1,12 @@
 import express from "express";
-import authRoutes from "./routes/auth.route.js"
-import messageRoutes from "./routes/message.route.js"
+import authRoutes from "./src/routes/auth.route.js"
+import messageRoutes from "./src/routes/message.route.js"
 import path from "path";
-import { connectDB } from "./lib/db.js";
-import { ENV } from "./lib/env.js";
+import { connectDB } from "./src/lib/db.js";
+import { ENV } from "./src/lib/env.js";
 import cookieParse from "cookie-parser";
 import cors from "cors";
-import { app, server } from "./lib/socket.js";
+import { app, server } from "./src/lib/socket.js";
 
 
 // const __dirname = path.resolve();
