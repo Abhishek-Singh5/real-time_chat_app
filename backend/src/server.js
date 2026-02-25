@@ -15,7 +15,7 @@ const PORT = ENV.PORT || 3000;
 
 // payload too large error
 app.use(express.json({ limit: "5mb" }))  // req.body
-app.use(cors({ origin: ENV.CLIENT_URL, credentials: true }));
+app.use(cors({ origin: "https://real-time-chat-app-sable-one.vercel.app", credentials: true }));
 app.use(cookieParse());
 
 
